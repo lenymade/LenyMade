@@ -1,76 +1,78 @@
-:root {
-  --background: #fffaf0;
-  --accent: #f8c8dc;
-  --text: #5c4033;
-  --highlight: #a3d5c3;
-}
-
+/* Global Styles */
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  background-color: var(--background);
-  color: var(--text);
-  line-height: 1.6;
+  background-color: #fffef8;
+  color: #444;
 }
 
+a {
+  text-decoration: none;
+  color: #f59bb4;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #ffc107;
+}
+
+/* Header */
 header {
-  background-color: var(--accent);
-  text-align: center;
-  padding: 1.5rem;
-  border-bottom: 4px dotted var(--highlight);
-  border-radius: 0 0 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff3cd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-header h1 {
-  margin: 0;
+.logo {
+  font-family: 'Pacifico', cursive;
   font-size: 2rem;
-}
-
-nav {
-  margin-top: 1rem;
+  color: #f59bb4;
 }
 
 nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: bold;
-  transition: color 0.3s;
+  margin-left: 20px;
+  font-weight: 600;
 }
 
-nav a:hover {
-  color: var(--highlight);
-}
-
-.intro {
-  text-align: center;
-  padding: 2rem;
-}
-
-.gallery {
+/* Hero Section */
+.hero {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
-  padding: 2rem;
+  padding: 50px 20px;
+  background: linear-gradient(120deg, #fff7e6 40%, #ffe4ec 100%);
 }
 
-.gallery img {
-  width: 200px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+.hero-text {
+  max-width: 500px;
+  padding: 20px;
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #f59bb4;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: var(--accent);
-  border-top: 2px dashed var(--highlight);
-  border-radius: 20px 20px 0 0;
-  margin-top: 2rem;
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-lemon {
+  background-color: #fce77d;
+  color: #444;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.hero-img img {
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
