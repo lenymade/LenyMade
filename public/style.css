@@ -76,3 +76,68 @@ nav a {
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
+/* Plushie Gallery */
+.gallery {
+  padding: 60px 20px;
+  background-color: #fffef8;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #f59bb4;
+}
+
+.plushie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.plushie-card {
+  background-color: #fff8dc;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 220px;
+  transition: transform 0.2s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.plushie-card:hover {
+  transform: translateY(-5px) scale(1.03);
+}
+
+.plushie-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.plushie-card h3 {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* "New!" Ribbon */
+.ribbon {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: #f59bb4;
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transform: rotate(-10deg);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.new .ribbon {
+  display: block;
+}
