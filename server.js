@@ -1,23 +1,17 @@
-const http = require('http');
-const fs = require('fs');
+const express = require('express');
+const app = express();
 const path = require('path');
 
-const server = http.createServer((req, res) => {
-  let filePath = './public' + (req.url === '/' ? '/index.html' : req.url);
-  const extname = path.extname(filePath);
-  const contentType = 'text/html';
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-  fs.readFile(filePath, (err, content) => {
-    if (err) {
-      res.writeHead(404);
-      res.end('Page not found');
-    } else {
-      res.writeHead(200, { 'Content-Type': contentType });
-      res.end(content, 'utf-8');
-    }
-  });
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+  res.render('index');
 });
 
-server.listen(3000, () => {
-  console.log('Server running at http://localhost:3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
